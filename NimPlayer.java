@@ -1,28 +1,85 @@
-/*
- * ELEN90041 Project A: Nimplayer class
- * Name: Xiaoqian Xie, Student ID: 709716,
- * Date: 22/03/2018
- */
 public class NimPlayer
 {
+	private int gamePlayed;
+	private int gameWon;
 
-	private String Name;//Name of players
+	private NimName idAndName = new NimName();
 
-	public void setName()//Setting the name of the player
+	//Constructor
+	public NimPlayer()
 	{
-		Name = Nimsys.keyboard.next();
-		System.out.println();
+		idAndName.setName("null","null","null");
+		gamePlayed = 0;
+		gameWon = 0;
+	}
+	
+	//reset game data to 0
+	public void reset()
+	{
+		gamePlayed = 0;
+		gameWon = 0;
 	}
 
-	public String getName()	//return the name of player
+
+	//increase number of game won by q
+	public void gameWon()
 	{
-		return Name;
+		gameWon = gameWon + 1;
+	}
+	//increase the number of game played by q
+	public void gamePlayed()
+	{
+		gamePlayed = gamePlayed + 1;
 	}
 
-	public int removeStone()//Method return how many stones removed 
+	//Mutators
+	//Setting the name of the player
+	public void setName(String username, String givenName, String familyName)
 	{
-		System.out.println(Name + "'s turn - remove how many?");
-		int NumStoneToRemove = Nimsys.keyboard.nextInt();
-		return NumStoneToRemove;
+		idAndName.setName(username, givenName, familyName);
 	}
+	//Overload 
+	public void setName(String givenName, String familyName)
+	{
+		idAndName.setName(givenName, familyName);
+	}
+
+	
+	//Accessors
+	//Get information
+	public String getUserName()
+	{
+		return idAndName.getUserName();
+	}
+
+	public String getGivenName()
+	{
+		return idAndName.getGivenName();
+	}
+
+	public String getFamilyName()
+	{
+		return idAndName.getFamilyName();
+	}
+	//return the name of player
+	public String getName()
+	{
+		return idAndName.getName();
+	}
+	//return number of game played
+	public int getGamePlayed()
+	{
+		return gamePlayed;
+	}
+
+	public String getFullInformation()
+	{
+		return idAndName.getNameReverse()+","+gamePlayed+" games,"+gameWon+" wins";
+	}
+	//retuer of the ratio of winning
+	public int getWinRatio()
+	{
+		return (int)Math.round(100.0*((double)gameWon/gamePlayed));
+	}
+
 }

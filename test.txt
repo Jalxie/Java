@@ -1,0 +1,59 @@
+addplayer a,a,a
+addplayer i,i,i
+addplayer j,j,j
+addplayer b,b,b
+addplayer c,c,c
+addplayer d,d,d
+addplayer e,e,e
+addplayer l,l,l
+addplayer m,m,m
+addplayer f,f,f
+addplayer g,g,g
+addplayer h,h,h
+addplayer k,k,k
+addplayer n,n,n
+startgame 1,1,a,d
+1
+startgame 1,1,a,e
+1
+startgame 1,1,a,c
+1
+startgame 1,1,c,a
+1
+startgame 1,1,e,d
+1
+startgame 1,1,d,m
+1
+startgame 1,1,b,a
+1
+startgame 1,1,a,n
+1
+startgame 1,1,h,b
+1
+startgame 1,1,a,f
+1
+startgame 1,1,a,b
+1
+startgame 1,1,a,b
+1
+startgame 1,1,m,b
+1
+startgame 1,1,a,g
+1
+startgame 1,1,n,b
+1
+startgame 1,1,j,b
+1
+startgame 1,1,a,k
+1
+startgame 1,1,a,k
+1
+startgame 1,1,a,h
+1
+rankings
+displayplayer a
+editplayer a,newwww,wowwww
+displayplayer a
+
+
+
